@@ -1,0 +1,131 @@
+h1 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.125rem;
+    white-space: nowrap;
+}
+#row1{
+    margin: auto;
+    width: 50%;
+    position: relative;
+}
+
+#board {
+    padding: 3rem;
+    margin: 1.5rem;
+    text-align: center;
+}
+
+.square {
+    float: left;
+    clear: right;
+    width: 100px;
+    height: 100px;
+    background-color: #f8F9fa;
+}
+
+.square:hover {
+    cursor: pointer;
+}
+
+.row {
+    margin: 0 auto;
+    width: 302px;
+}
+
+.top {
+    border-bottom-color: rgba(52, 58, 64, 0.500);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.bottom {
+    border-top-color: rgba(52, 58, 64, 0.500);
+    border-top-style: solid;
+    border-top-width: 1px;
+}
+
+.left {
+    border-right-color: rgba(52, 58, 64, 0.500);
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+
+.right {
+    border-left-color: rgba(52, 58, 64, 0.500);
+    border-left-style: solid;
+    border-left-width: 1px;
+}
+
+#squareC {
+    border-top-right-radius: 0.25rem;
+}
+
+#squareI {
+    border-bottom-right-radius: 0.25rem;
+}
+
+#squareG {
+    border-bottom-left-radius: 0.25rem;
+}
+
+#squareA {
+    border-top-left-radius: 0.25rem;
+}
+
+button {
+    border:none;
+    border-top-left-radius: 0.25rem;
+}
+
+
+.XO {
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.lnkbtn{
+    display: block;
+    width: 100px;
+    background-color: lightgrey;
+    border: 1px solid black;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 0px 5px 0px;
+}
+
+.lnkbtn:hover{
+    background-color: #aaa;
+}
+
+.lnkbtn:visited{
+    color: rgb(0, 0, 0);
+}
+
+.lnkbtn:active{
+    border: 1px solid rgb(255, 255, 255);
+}
+
+a.custom-button {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f8F9fa;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  a.custom-button:hover {
+    background-color: #f8F9fa;
+  }
+
+  h2{
+    margin-top: -1.5rem;
+  }
+  
+  

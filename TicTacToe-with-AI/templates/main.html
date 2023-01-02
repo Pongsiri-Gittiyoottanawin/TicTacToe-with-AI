@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Head -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Title -->
+        <title>XO Game with AI</title>
+        <!-- Styles CSS -->
+        <link rel="stylesheet" href="{{ url_for ('static', filename='css/style.css') }}" >
+        <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    </head>
+
+    <!-- Body -->
+    <body>
+          <br>
+          <br>
+          <h2><a href = "/gamemode1" class = "custom-button">Player vs Player</a></h2>
+          <br>
+          <h2><a href = "/gamemode2" class = "custom-button">Player vs Random (Easy)</a></h2>
+          <br>
+          <h2><a href = "/gamemode3" class = "custom-button">Player vs AgentMaxV (Normal)</a></h2>
+          <br>
+          <h2><a href = "/gamemode4" class = "custom-button">Player vs AgentMinimax (Hard)</a></h2>
+
+          <audio id="myaudio" autostart="false" loop autoplay>
+            <source src="{{ url_for('static', filename='sound/BG.mp3') }}">
+          </audio>
+          <script>
+            var audioElement = document.getElementById("myaudio");
+          
+            function toggleAudio() {
+              if (audioElement.paused) {
+                audioElement.play();
+                document.cookie = "audioState=playing; max-age=3600";
+              } else {
+                audioElement.pause();
+                document.cookie = "audioState=paused; max-age=3600";
+              }
+            }
+          
+            function setInitialAudioState() {
+              var audioState = getCookie("audioState");
+              if (audioState == "playing") {
+                audioElement.play();
+              } else if (audioState == "paused") {
+                audioElement.pause();
+              }
+            }
+          
+            function getCookie(name) {
+              var value = "; " + document.cookie;
+              var parts = value.split("; " + name + "=");
+              if (parts.length == 2) return parts.pop().split(";").shift();
+            }
+          </script>
+          
+          <button onclick="toggleAudio()">Music</button>
+          <script>setInitialAudioState();</script>
+
+
+          
+
+
+          
+          
+          
+          
+
+        <div class="container" id="board">
+            <!-- Heading -->
+            <div class="row" id="row1">
+                <h1>{{head}}</h1>
+            </div>
+            <form method="POST" action="/play">
+            <!-- Top Row -->
+            <div class="row" id="row2">
+                <div class="top left square" id="squareA"><button name='top_left' class="square XO", type="submit" value="click">{{show_position[0]}}</button></div>
+                <div class="top middle square" id="squareB"><button name='top_mid' class="square XO" type="submit" value="click">{{show_position[1]}}</button></div>
+                <div class="top right square" id="squareC"><button name='top_right' class="square XO" type="submit" value="click">{{show_position[2]}}</button></div>
+            </div>
+            <!-- Middle Row -->
+            <div class="row" id="row3">
+                <div class="middle left square" id="squareD"><button name='mid_left' class="square XO" type="submit" value="click">{{show_position[3]}}</button></div>
+                <div class="middle center square" id="squareE"><button name='mid_mid' class="square XO" type="submit" value="click">{{show_position[4]}}</button></div>
+                <div class="middle right square" id="squareF"><button name='mid_righ' class="square XO" type="submit" value="click">{{show_position[5]}}</button></div>
+            </div>
+            <!-- Bottom Row -->
+            <div class="row" id="row4">
+                <div class="bottom left square" id="squareG"><button name='bot_left' class="square XO" type="submit" value="click">{{show_position[6]}}</button></div>
+                <div class="bottom middle square" id="squareH"><button name='bot_mid' class="square XO" type="submit" value="click">{{show_position[7]}}</button></div>
+                <div class="bottom right square" id="squareI"><button name='bot_right' class="square XO" type="submit" value="click">{{show_position[8]}}</button></div>
+            </div>
+            </form>
+        </div>
+        <script>
+            var audio = document.getElementById("myaudio");
+            audio.volume = 0.115;
+            
+        </script>
+    </body>
+</html>
