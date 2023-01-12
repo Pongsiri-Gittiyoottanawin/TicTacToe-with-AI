@@ -31,8 +31,13 @@ AgentMinimax using the Minimax algorithm which is a Backtracking Algorithm that 
 It works by using a recursive function called minimax to explore all the possible moves and game states in the game tree,
 starting from the root node (which represents the current state of the game)
 and going all the way down to the leaf nodes (which represent the final stages of the game) to consider the scores of all possible moves at each step.
+![null (7)](https://user-images.githubusercontent.com/116048487/211975212-4682058b-b4af-45df-b373-6f9838987658.png)
+![null (8)](https://user-images.githubusercontent.com/116048487/211975226-768cfbf3-72d5-4117-9cb8-71a0a2f5afd6.png)
+![null (9)](https://user-images.githubusercontent.com/116048487/211975233-36c85df4-db51-4c28-99a6-20669b293b1b.png)
+![null (10)](https://user-images.githubusercontent.com/116048487/211975239-b5dc11d4-e9d1-4b81-bda0-b64aac18cc81.png)
+![null (11)](https://user-images.githubusercontent.com/116048487/211975250-b38f005a-0187-4751-852b-3a5f99320642.png)
+![null (12)](https://user-images.githubusercontent.com/116048487/211975261-00c84371-741e-428e-bceb-cf79bbe37b33.png)
 ![null (13)](https://user-images.githubusercontent.com/116048487/211844283-c6e19488-3da8-4ae4-b9e7-a63c88269b31.png)
-![Uploading image.png…]()
 
 
 
